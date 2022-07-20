@@ -3,6 +3,28 @@ import styled from "styled-components";
 export const CanvasContainer = styled.div`
   width: 100%;
   height: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 6px;
+    border-radius: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #002654;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #013069;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -21,7 +43,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderTitle = styled.h1`
   font-size: ${(props) =>
-    props.dark ? "24px" : props.light ? "24px" : "42px"};
+    props.dark ? "24px" : props.light ? "24px" : "34px"};
   font-weight: 400;
   margin-bottom: 8px;
   margin-top: 0;
@@ -34,7 +56,7 @@ export const HeaderTitle = styled.h1`
       props.dark ? "16px" : props.light ? "16px" : "24px"};
     font-weight: 300;
     color: ${(props) => (props.light ? "#111" : "#ccc")};
-    margin-right: 5px;
+    margin-right: 3px;
   }
   span:nth-child(2) {
     display: inline-block;
@@ -55,10 +77,20 @@ export const HeaderSubText = styled.h1`
       props.dark ? "16px" : props.light ? "16px" : "24px"};
     font-weight: 300;
     color: ${(props) => (props.light ? "#111" : "#ccc")};
-    margin-right: 5px;
+    margin-right: 3px;
   }
   span:nth-child(2) {
     display: inline-block;
+  }
+  span:nth-child(3) {
+    display: ${(props) =>
+      props.dark ? "none" : props.light ? "none" : "inline-block"};
+    font-size: ${(props) =>
+      props.dark ? "16px" : props.light ? "16px" : "24px"};
+    margin-left: 10px;
+    .type-animation-container {
+      min-width: 300px;
+    }
   }
 `;
 
@@ -73,8 +105,10 @@ export const ContainerInner = styled.div`
   top: 30%;
   max-height: 500px;
   overflow-y: scroll;
+  overflow-x: hidden;
   overscroll-behavior: contain;
   width: 99%;
+
   &::-webkit-scrollbar {
     width: 6px;
     border-radius: 10px;
@@ -103,6 +137,7 @@ export const ImgContainer = styled.div`
     height: 100px;
     width: 100px;
     border-radius: 100%;
+    margin-bottom: 10px;
   }
 `;
 
@@ -159,8 +194,10 @@ export const MailPhone = styled.a`
 `;
 
 export const PageTitle = styled.a`
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  letter-spacing: 7px;
   color: ${(props) => (props.dark ? "#111" : "#fff")};
   display: inline-block;
   margin-top: 20px;
@@ -176,7 +213,7 @@ export const PageTitle = styled.a`
 
 export const JobTitle = styled.h4`
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 10px;
   margin-top: 0;
 `;
@@ -214,8 +251,8 @@ export const KeywordsBadge = styled.li`
   border-radius: 100px;
   list-style: none;
   padding: 5px 10px;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 700;
 `;
 
 export const SummaryList = styled.ul`
@@ -226,8 +263,8 @@ export const SummaryList = styled.ul`
 `;
 
 export const SummaryListItem = styled.li`
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 22px;
   list-style: none;
   padding-left: 20px;

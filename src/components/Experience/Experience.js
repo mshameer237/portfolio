@@ -8,7 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 import {
   VscBriefcase,
   VscMortarBoard,
-  VscPinned,
+  // VscPinned,
   VscChevronDown,
   VscChevronUp,
 } from "react-icons/vsc";
@@ -31,8 +31,18 @@ import { motion } from "framer-motion";
 const Experience = ({ page2 }) => {
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
+
+  const handleScroll = (e) => {
+    const bottom =
+      e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    if (bottom) {
+      e.target.style.pointerEvents = "none";
+      console.log(e.target, "e.target");
+    }
+  };
+
   return (
-    <ContainerInner>
+    <ContainerInner onScroll={handleScroll}>
       <Dflex>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -48,8 +58,8 @@ const Experience = ({ page2 }) => {
             <JobTitle>UI Lead</JobTitle>
             <CompanyText>Neointeraction Designs, Bangalore, India</CompanyText>
             <KeywordsText>
-              <KeywordsBadge>UI Development</KeywordsBadge>
-              <KeywordsBadge>User Experience</KeywordsBadge>
+              <KeywordsBadge>UI Dev</KeywordsBadge>
+              <KeywordsBadge>UX Design</KeywordsBadge>
               <KeywordsBadge>Visual Design</KeywordsBadge>
               <KeywordsBadge>Team Leading</KeywordsBadge>
             </KeywordsText>
@@ -106,8 +116,8 @@ const Experience = ({ page2 }) => {
             <JobTitle>Web Developer</JobTitle>
             <CompanyText>Freelance, Kerala, India</CompanyText>
             <KeywordsText>
-              <KeywordsBadge isLight>UI Development</KeywordsBadge>
-              <KeywordsBadge isLight>User Experience</KeywordsBadge>
+              <KeywordsBadge isLight>UI Dev</KeywordsBadge>
+              <KeywordsBadge isLight>UX</KeywordsBadge>
               <KeywordsBadge isLight>HTML</KeywordsBadge>
               <KeywordsBadge isLight>CSS</KeywordsBadge>
               <KeywordsBadge isLight>jQuery</KeywordsBadge>

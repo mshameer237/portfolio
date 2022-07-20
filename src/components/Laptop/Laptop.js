@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF, useScroll } from "@react-three/drei";
-import * as THREE from "three";
-import { a as three } from "@react-spring/three";
 
-const vec = new THREE.Vector3();
+import { a as three } from "@react-spring/three";
 
 const Laptop = ({
   open,
@@ -58,7 +56,7 @@ const Laptop = ({
   return (
     <>
       <group
-        position={page2 || page3 || page4 ? [-400, -400, -400] : [0, -4, -4]}
+        position={page2 || page3 || page4 ? [-4000, -4000, -4000] : [0, -4, -4]}
         ref={group}
         {...props}
         onPointerOver={(e) => {

@@ -1,25 +1,12 @@
-import * as THREE from "three";
-import React, { useEffect, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  useGLTF,
-  softShadows,
-  OrbitControls,
-  ContactShadows,
-  ScrollControls,
-  useScroll,
-  Html,
-} from "@react-three/drei";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { softShadows, ContactShadows, ScrollControls } from "@react-three/drei";
 import { useSpring } from "@react-spring/core";
-import { a as three } from "@react-spring/three";
 
 // components
 import ScrollAnimation from "./components/ScrollAnimation";
 import Laptop from "../../components/Laptop";
 import SkillBlock from "./components/SkillBlock";
-import Experience from "../../components/Experience";
-import AboutMe from "../../components/AboutMe";
 
 // images
 import ReactSvg from "../../assets/images/react.svg";
@@ -133,14 +120,14 @@ const MainPage = ({ stateVal, page0, setPage0 }) => {
 
   useEffect(() => {
     stateVal(open, page2, page3, page4);
-  }, [open, page2, page3, page4]);
+  }, [open, page2, page3, page4, stateVal]);
   return (
     <>
       <Canvas
         dpr={[1, 2]}
         camera={{ position: page2 ? [0, 0, 0] : [10, 5, 20], fov: 45 }}
       >
-        <ScrollControls pages={5}>
+        <ScrollControls pages={3} distance={0.8} damping={2}>
           <>
             <>
               <mesh position={[0, 0, 0]}>
@@ -182,15 +169,16 @@ const MainPage = ({ stateVal, page0, setPage0 }) => {
               blur={2}
               far={5.5}
             />
-            <OrbitControls enableZoom={false} />
+            {/* <OrbitControls enableZoom={false} /> */}
           </>
+
           <color
             attach="background"
             args={
               open
                 ? ["#222"]
                 : page2
-                ? ["#1976D2"]
+                ? ["#3498DB"]
                 : page3
                 ? ["#689F38"]
                 : page4

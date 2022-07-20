@@ -11,15 +11,12 @@ function App() {
   const [page2, setPage2] = useState();
   const [page3, setPage3] = useState();
   const [page4, setPage4] = useState();
-  const stateVal = useCallback(
-    (open, page2, page3, page4) => {
-      setPage1(open);
-      setPage2(page2);
-      setPage3(page3);
-      setPage4(page4);
-    },
-    [page2, page3]
-  );
+  const stateVal = useCallback((open, page2, page3, page4) => {
+    setPage1(open);
+    setPage2(page2);
+    setPage3(page3);
+    setPage4(page4);
+  }, []);
   return (
     <CanvasContainer>
       <Suspense fallback={<Loader />}>
