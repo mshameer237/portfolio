@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2dcce257.chunk.css",
+    "main.js": "./static/js/main.6bf38db5.chunk.js",
+    "main.js.map": "./static/js/main.6bf38db5.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.ff1113a1.js",
+    "runtime-main.js.map": "./static/js/runtime-main.ff1113a1.js.map",
+    "static/css/2.2e99a83d.chunk.css": "./static/css/2.2e99a83d.chunk.css",
+    "static/js/2.23443043.chunk.js": "./static/js/2.23443043.chunk.js",
+    "static/js/2.23443043.chunk.js.map": "./static/js/2.23443043.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.2e99a83d.chunk.css.map": "./static/css/2.2e99a83d.chunk.css.map",
+    "static/css/main.2dcce257.chunk.css.map": "./static/css/main.2dcce257.chunk.css.map",
+    "static/js/2.23443043.chunk.js.LICENSE.txt": "./static/js/2.23443043.chunk.js.LICENSE.txt",
+    "static/media/axure.433fa9ac.svg": "./static/media/axure.433fa9ac.svg",
+    "static/media/bootstrap.91aad92a.svg": "./static/media/bootstrap.91aad92a.svg",
+    "static/media/css.3ec32022.svg": "./static/media/css.3ec32022.svg",
+    "static/media/git.43d387b7.svg": "./static/media/git.43d387b7.svg",
+    "static/media/html.c1bb84e0.svg": "./static/media/html.c1bb84e0.svg",
+    "static/media/jq.25d9404e.svg": "./static/media/jq.25d9404e.svg",
+    "static/media/js.081325c6.svg": "./static/media/js.081325c6.svg",
+    "static/media/marvel.d8da36d1.svg": "./static/media/marvel.d8da36d1.svg",
+    "static/media/mui.60a0ece0.svg": "./static/media/mui.60a0ece0.svg",
+    "static/media/next.86555307.svg": "./static/media/next.86555307.svg",
+    "static/media/pic.e47f7b5f.gif": "./static/media/pic.e47f7b5f.gif",
+    "static/media/react.a060cbe8.svg": "./static/media/react.a060cbe8.svg",
+    "static/media/sass.903cef0c.svg": "./static/media/sass.903cef0c.svg",
+    "static/media/sketch.c45309d8.svg": "./static/media/sketch.c45309d8.svg",
+    "static/media/storybook.6cb577d9.svg": "./static/media/storybook.6cb577d9.svg",
+    "static/media/strapi.ab1aa8ab.svg": "./static/media/strapi.ab1aa8ab.svg",
+    "static/media/xd.dbda9056.svg": "./static/media/xd.dbda9056.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff1113a1.js",
+    "static/css/2.2e99a83d.chunk.css",
+    "static/js/2.23443043.chunk.js",
+    "static/css/main.2dcce257.chunk.css",
+    "static/js/main.6bf38db5.chunk.js"
+  ]
+}
