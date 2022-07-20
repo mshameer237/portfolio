@@ -22,7 +22,9 @@ const Laptop = ({
 }) => {
   const group = useRef();
   // Load model
-  const { nodes, materials } = useGLTF("/mac-draco.glb");
+  const { nodes, materials } = useGLTF(
+    process.env.PUBLIC_URL + "/mac-draco.glb"
+  );
   // Take care of cursor state on hover
   const [hovered, setHovered] = useState(false);
   useEffect(
