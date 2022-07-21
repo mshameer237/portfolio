@@ -153,7 +153,7 @@ const Header = ({ page1, page2, page3, page4 }) => {
             initial={true}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <PageTitle dark={page4}>
+            <PageTitle dark={page1}>
               <VscAccount /> About Me
             </PageTitle>
           </motion.div>

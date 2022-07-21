@@ -34,7 +34,7 @@ const InfoBlock = ({ page1, page2, page3, page4 }) => {
           transition={{ duration: 1, ease: "easeOut" }}
           initial={true}
         >
-          &nbsp;Shameer
+          Shameer
         </motion.span>
       </HeaderTitle>
       <HeaderSubText light={page1 || page2 || page3} dark={page4}>
@@ -46,7 +46,7 @@ const InfoBlock = ({ page1, page2, page3, page4 }) => {
           transition={{ duration: 1, ease: "easeOut" }}
           initial={true}
         >
-          &nbsp;User Interface Engineer.
+          User Interface Engineer.
         </motion.span>
       </HeaderSubText>
       {page1 || page2 || page3 || page4 ? (

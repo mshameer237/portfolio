@@ -127,7 +127,7 @@ const MainPage = ({ stateVal, page0, setPage0 }) => {
         dpr={[1, 2]}
         camera={{ position: page2 ? [0, 0, 0] : [10, 5, 20], fov: 45 }}
       >
-        <ScrollControls pages={3} distance={0.8} damping={2}>
+        <ScrollControls pages={2.8} distance={0.8} damping={4} enabled>
           <>
             <>
               <mesh position={[0, 0, 0]}>
@@ -178,11 +178,11 @@ const MainPage = ({ stateVal, page0, setPage0 }) => {
               open
                 ? ["#222"]
                 : page2
-                ? ["#3498DB"]
-                : page3
                 ? ["#689F38"]
+                : page3
+                ? ["#16A085"]
                 : page4
-                ? ["#FBC02D"]
+                ? ["#3498DB"]
                 : ["#111"]
             }
           />

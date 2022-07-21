@@ -3,6 +3,7 @@ import { Suspense, useCallback, useState } from "react";
 import MainPage from "./pages/MainPage";
 import Header from "./components/Header";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Loader from "./components/Loader";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Header page1={page1} page2={page2} page3={page3} page4={page4} />
         <MainPage stateVal={stateVal} page0={page0} setPage0={setPage0} />
         {page2 && <Experience />}
+        {page3 && <Projects />}
       </Suspense>
     </CanvasContainer>
   );

@@ -44,10 +44,10 @@ export const HeaderContainer = styled.div`
 export const HeaderTitle = styled.h1`
   font-size: ${(props) =>
     props.dark ? "24px" : props.light ? "24px" : "34px"};
-  font-weight: 400;
+  font-weight: ${(props) => (props.dark ? "300" : props.light ? "300" : "400")};
   margin-bottom: 8px;
   margin-top: 0;
-  color: ${(props) => (props.dark ? "#111" : "#fff")};
+  color: ${(props) => (props.dark ? "#fff" : "#fff")};
 
   span:first-child {
     display: ${(props) =>
@@ -56,7 +56,7 @@ export const HeaderTitle = styled.h1`
       props.dark ? "16px" : props.light ? "16px" : "24px"};
     font-weight: 300;
     color: ${(props) => (props.light ? "#111" : "#ccc")};
-    margin-right: 3px;
+    margin-right: 8px;
   }
   span:nth-child(2) {
     display: inline-block;
@@ -66,31 +66,21 @@ export const HeaderTitle = styled.h1`
 export const HeaderSubText = styled.h1`
   font-size: ${(props) =>
     props.dark ? "22px" : props.light ? "22px" : "40px"};
-  font-weight: 400;
+  font-weight: ${(props) => (props.dark ? "600" : props.light ? "600" : "400")};
   margin-top: 0;
   margin-bottom: 0;
-  color: ${(props) => (props.dark ? "#111" : "#fff")};
+  color: ${(props) => (props.dark ? "#fff" : "#fff")};
   span:first-child {
     display: ${(props) =>
       props.dark ? "none" : props.light ? "none" : "inline-block"};
     font-size: ${(props) =>
       props.dark ? "16px" : props.light ? "16px" : "24px"};
-    font-weight: 300;
+    font-weight: 400;
     color: ${(props) => (props.light ? "#111" : "#ccc")};
-    margin-right: 3px;
+    margin-right: 8px;
   }
   span:nth-child(2) {
     display: inline-block;
-  }
-  span:nth-child(3) {
-    display: ${(props) =>
-      props.dark ? "none" : props.light ? "none" : "inline-block"};
-    font-size: ${(props) =>
-      props.dark ? "16px" : props.light ? "16px" : "24px"};
-    margin-left: 10px;
-    .type-animation-container {
-      min-width: 300px;
-    }
   }
 `;
 
@@ -103,14 +93,14 @@ export const ContainerInner = styled.div`
   padding: 0 0 0 30px;
   position: absolute;
   top: 30%;
-  max-height: 500px;
+  /* max-height: 500px;
   overflow-y: scroll;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
+  overflow-x: hidden; */
+  /* overscroll-behavior: auto; */
   width: 99%;
 
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
     border-radius: 10px;
   }
 
@@ -195,9 +185,9 @@ export const MailPhone = styled.a`
 
 export const PageTitle = styled.a`
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   /* text-transform: uppercase; */
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   color: ${(props) => (props.dark ? "#111" : "#fff")};
   display: inline-block;
   margin-top: 20px;
@@ -245,8 +235,8 @@ export const MoreInfo = styled.div`
 `;
 
 export const KeywordsBadge = styled.li`
-  background: ${(props) => (props.isLight ? "#222" : "#fff")};
-  color: ${(props) => (props.isLight ? "#fff" : "#222")};
+  background: ${(props) => (props.isLight ? "#689F38" : "#689F38")};
+  color: ${(props) => (props.isLight ? "#fff" : "#fff")};
   margin-right: 10px;
   border-radius: 100px;
   list-style: none;
